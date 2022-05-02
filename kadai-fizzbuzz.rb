@@ -1,21 +1,17 @@
-def FizzBuss(number)
-   if (number % 3) == 0
-     if (number % 5) == 0
-        result = "FizzBuzz"
-     elsif (number % 5) != 0 
-        result = "Fizz"
-     end
-  elsif (number % 3) != 0
-     if (number % 5) == 0
-        result =  "Buzz"
-     else
-        result =  number.to_s
-     end
-  end
+def fizzbuzz(num)
+   if (num % 15) == 0
+      "FizzBuzz"
+   elsif (num % 5) == 0
+      "Buzz"
+   elsif (num % 3) == 0
+      "Fizz"
+   else
+      num
+   end
 end
 
 num_max = 100
 
-(1..num_max).each do |num|
-   puts FizzBuss(num)
+(1..num_max).each do |number|
+   puts fizzbuzz(number)
 end
